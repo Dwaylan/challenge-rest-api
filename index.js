@@ -10,4 +10,8 @@ const PORT = process.env.PORT || 5000;
 app.use(bodyparser.json());
 app.use(business);
 
+app.get("/", (req, res) => {
+  res.send("vyasa business API");
+});
+
 app.listen(PORT, console.log(`I am listening on port ${5000}`));
